@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+#list {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(184, 206, 15);
+    width: 50rem;
+    height: auto;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#header {
+    margin: 10px;
+    font-size: 3rem;
+}
+
+
+
+#addedItemsDiv {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: 5px solid rgb(255, 0, 0);
+    width: 30rem;
+    font-size: 30px;
+    background-color: green;
+    align-items: center;
+
+
+}
+
+#addedItems {
+    text-align: left;
+    width: auto;
+    overflow-wrap: anywhere;
+    height: auto;
+}
+
+#yourItem {
+    padding: 30px;
+}
+
+#yourInput {
+    font-size: 2rem;
+    width: 40rem;
+    overflow-wrap: anywhere;
+}
+
+#addButton {
+    font-size: 2rem;
+    margin: 3rem;
+}
+
+.removeButton {
+    margin-right: 4rem;
+    margin-left: 20rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#listItem {
+    border-bottom: 3px solid black;
+}
