@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div id="menuButton">&#9776; Menu</div>
+    <button id="historyButton" onclick="toggleHistory()">&#9776; History</button>
+    <div id="history" class="history">
+        <h2>Removed Items</h2>
+        <ul id="removed-items">
+
+        </ul>
+    </div>
     <div id="list">
-        <div id="header">To-do List
+        <div id="header"><h1>To-do List</h1>
             <div id="yourItem">
                 <input type="text" id="yourInput" class="yourInput">
                 <button id="addButton" class="addButton" onclick>Add to the list</button>

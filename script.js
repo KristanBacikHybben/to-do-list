@@ -1,7 +1,8 @@
 const addToTheList = document.querySelector("#addButton");
 const listAdded = document.getElementById("addedItems");
 const yourInput = document.getElementById("yourInput");
-
+const history = document.getElementById("history");
+const historyButton = document.getElementById("historyButton");
 
 function addToList() {
     addToTheList.addEventListener("click", () => {
@@ -12,19 +13,31 @@ function addToList() {
         
         yourInput.value = "";
 
-        const remove = document.createElement('button');
-        remove.className = "removeButton";
-        remove.textContent = "DONE";
-        remove.addEventListener("click", () => {
-            listItem.remove();
+        const removed = document.createElement('button');
+        removed.className = "removeButton";
+        removed.textContent = "REMOVE";
+        removed.addEventListener("click", () => {
+            moveItemToHistory(listItem);
+
         })
-        listItem.appendChild(remove);
+
+        listItem.appendChild(removed);
         
         listAdded.appendChild(listItem);
-
     })
 }
 
+function moveItemToHistory(item) {
+    listAdded.removeChild(item);
+    history.appendChild(item);
+}
+historyButton.addEventListener("click", () => {
+    if (history.style.display === "block") {
+        history.style.display = "none";
+    } else {
+        history.style.display = "block";
+    }
+});
 
 
 addToList();
